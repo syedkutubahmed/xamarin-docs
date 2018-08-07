@@ -64,7 +64,7 @@ Open the **Resources/values** directory and a create a new file called
 ```xml
 <?xml version="1.0" encoding="utf-8" ?>
 <resources>
-  <style name="MyTheme" parent="@android:style/Theme.Material.Light.DarkActionBar">
+  <style name="MyTheme" parent="Theme.Material.Light.DarkActionBar">
     <item name="android:windowNoTitle">true</item>
     <item name="android:windowActionBar">false</item>
     <item name="android:colorPrimary">#5A8622</item>
@@ -112,7 +112,7 @@ For more information about applying a custom theme to an app, see
 ## Define a Toolbar Layout
 
 In the **Resources/layout** directory, create a new file called 
-**toolbar.xml**. Replace its contents with the following XML: 
+**toolbar.axml**. Replace its contents with the following XML: 
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -168,11 +168,11 @@ its contents with the following XML:
     android:layout_height="match_parent">
     <include
         android:id="@+id/toolbar"
-        layout="@layout/toolbar" />
+        android:layout="@layout/toolbar" />
 </RelativeLayout>
 ```
 
-This layout includes the `Toolbar` defined in **toolbar.xml** and 
+This layout includes the `Toolbar` defined in **toolbar.axml** and 
 uses a `RelativeLayout` to specify that the `Toolbar` is to be 
 placed at the very top of the UI (above the button). 
 
